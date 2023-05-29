@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" >
+   <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script>  -->
+
+    <style type="text/css">
+  .centarcontent{
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	background: #333;
+  	min-height: 100vh;
+  }
+  label{
+ position: relative;
+ top: -150px;
+ width: 150px;
+ height: 75px;
+ background: #212121;
+ border-radius: 10px;
+  }
+  label input{
+  	appearance: none;
+  }
+    label span{
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 75px;
+  background: #333;
+  border:  6px solid #212121;
+  border-radius:  14px;
+  cursor: pointer;
+  transition: 0.5s;
+
+    	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+label input:checked ~ span{
+	left: 75px;
+}
+
+label span ion-icon{
+color:  rgba(255, 255, 255 , 0.25);
+font-size: 2em;
+transition: 0.5s;
+}
+label input:checked ~ span ion-icon{
+color:  rgba(255,255, 255, 1);
+filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+
+}
+
+.build{
+	position: absolute;
+	top: 80px;
+	left: 0%;
+	transform: translateX(-50px);
+	width: 348px;
+	height: 408px;
+	pointer-events: none;
+	background-image: url('bulb_off.jpg');
+}
+label input:checked ~ .build{
+	background-image: url('bulb_on.jpg');
+
+}
+
+   </style>
+
+  </head>
+  <body class="bg-secondary">
+    <h1 class="bg-danger text-light text-center p-2">--</h1>
+          <div class="container">
+    	<div class="row">
+    		<div class="col centarcontent">
+			     <label>
+			     	 <input type="checkbox">
+			     	 <!-- <ion-icon name="bulb-outline"></ion-icon> -->
+			     	 <!-- <ion-icon name="contrast-outline"></ion-icon> -->
+			     	 <!-- <ion-icon name="sunny-outline"></ion-icon> -->
+			     	 <!-- <ion-icon name="moon-outline"></ion-icon> -->
+			     	 <span><ion-icon name="bulb-outline"></ion-icon></span>
+			     	 <div class="build"></div>
+			     </label>	
+    		</div>
+    	</div>
+      </div>
+          <!-- https://ionic.io/ionicons -->	
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script type="text/javascript">
+   </script> 
+  </body>
+</html>   
